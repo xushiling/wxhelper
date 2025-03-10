@@ -1,0 +1,17 @@
+1、本地安装CMake
+下载 CMake：
+访问 CMake 官网。https://cmake.org/download/
+下载适用于 Windows 的安装程序（例如 cmake-x.x.x-windows-x86_64.msi）。
+安装 CMake：
+运行下载的安装程序。
+在安装过程中，确保勾选 Add CMake to the system PATH for all users（将 CMake 添加到系统环境变量）。
+验证安装：
+打开命令提示符或 PowerShell，运行：
+cmake --version
+如果显示 CMake 版本号，说明安装成功。
+
+2、当前source目录下进行编译
+cmake -S . -B build -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -A Win32
+cmake --build build
+
+注意一定要编译32位版本，因为微信、helper.dll均为32位，需要一致
